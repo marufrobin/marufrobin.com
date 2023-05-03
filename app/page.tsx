@@ -1,31 +1,16 @@
-import Link from "next/link";
-import Image from "next/image";
-import { getBlogViews, getTweetCount, getStarCount } from "lib/metrics";
 import {
   ArrowIcon,
   DownloadIcon,
   EmailIcon,
   GitHubIcon,
   TwitterIcon,
-  ViewsIcon,
 } from "components/icons";
-import { name, about, bio, avatar } from "lib/info";
+import { about, avatar, name } from "lib/info";
+import Image from "next/image";
 
 export const revalidate = 60;
 
 export default async function HomePage() {
-  let starCount, views, tweetCount;
-
-  try {
-    [starCount, views, tweetCount] = await Promise.all([
-      getStarCount(),
-      getBlogViews(),
-      getTweetCount(),
-    ]);
-  } catch (error) {
-    console.error(error);
-  }
-
   return (
     <section>
       <h1 className="font-serif text-3xl font-bold">{name}</h1>
@@ -33,14 +18,6 @@ export default async function HomePage() {
         {about()}
       </p>
       {/* <div className="flex flex-col items-start my-8 md:items-center md:flex-row">
-        <Image
-          alt={name}
-          className="rounded-full grayscale"
-          src={avatar}
-          placeholder="blur"
-          width={100}
-          priority
-        />
         <div className="mt-8 ml-0 space-y-2 md:mt-0 md:ml-6 text-neutral-500 dark:text-neutral-400">
           <a
             rel="noopener noreferrer"
@@ -49,7 +26,7 @@ export default async function HomePage() {
             className="flex items-center gap-2"
           >
             <TwitterIcon />
-            {`${tweetCount.toLocaleString()} tweets all time`}
+            12.5k followers on Twitter
           </a>
           <a
             rel="noopener noreferrer"
@@ -58,12 +35,8 @@ export default async function HomePage() {
             className="flex items-center gap-2"
           >
             <GitHubIcon />
-            {`${starCount.toLocaleString()} stars on this repo`}
+            {`12 stars on this repo`}
           </a>
-          <Link href="/blog" className="flex items-center">
-            <ViewsIcon />
-            {`${views.toLocaleString()} blog views all time`}
-          </Link>
         </div>
       </div> */}
 
@@ -116,9 +89,7 @@ export default async function HomePage() {
           </a>
         </li>
       </ul>
-
       <h3 className="mt-8">Get in touch</h3>
-
       <ul className="flex flex-col mt-2 space-x-0 space-y-2 md:flex-row md:space-x-4 md:space-y-0 font-sm text-neutral-500 dark:text-neutral-400">
         <li>
           <a

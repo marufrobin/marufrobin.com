@@ -21,6 +21,7 @@ specifiers:
   next: 13.2.5-canary.16
   next-auth: ^4.19.0
   next-contentlayer: ^0.3.0
+  node-fetch: ^3.3.1
   postcss: ^8.4.21
   react: 18.2.0
   react-dom: 18.2.0
@@ -51,6 +52,7 @@ dependencies:
   next: 13.2.5-canary.16_biqbaboplfbrettd7655fr4n2y
   next-auth: 4.19.0_wjxsymqnfii5p4j3fn3qqbjt3i
   next-contentlayer: 0.3.0_wjxsymqnfii5p4j3fn3qqbjt3i
+  node-fetch: 3.3.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-wrap-balancer: 0.4.0_react@18.2.0
@@ -530,7 +532,7 @@ packages:
     dependencies:
       '@mdx-js/mdx': 2.2.1
       esbuild: 0.17.5
-      node-fetch: 3.3.0
+      node-fetch: 3.3.1
       vfile: 5.3.6
     transitivePeerDependencies:
       - supports-color
@@ -2827,8 +2829,8 @@ packages:
       whatwg-url: 5.0.0
     dev: false
 
-  /node-fetch/3.3.0:
-    resolution: {integrity: sha512-BKwRP/O0UvoMKp7GNdwPlObhYGB5DQqwhEDQlNKuoqwVYSxkSZCSbHjnFFmUEtwSKRPU4kNK8PbDYYitwaE3QA==}
+  /node-fetch/3.3.1:
+    resolution: {integrity: sha512-cRVc/kyto/7E5shrWca1Wsea4y6tL9iYJE5FBCius3JQfb/4P4I295PfhgbJQBLTx6lATE4z+wK0rPM4VS2uow==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       data-uri-to-buffer: 4.0.1
