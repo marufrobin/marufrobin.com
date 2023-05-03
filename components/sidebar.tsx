@@ -9,11 +9,11 @@ import { avatar, name } from "lib/info";
 // Routers
 const navItems = {
   "/": {
-    name: "home",
+    name: "Home",
   },
-  // "/uses": {
-  //   name: "uses",
-  // },
+  "/projects": {
+    name: "Projects",
+  },
   // "/blog": {
   //   name: "blog",
   // },

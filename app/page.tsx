@@ -1,12 +1,5 @@
-import {
-  ArrowIcon,
-  DownloadIcon,
-  EmailIcon,
-  GitHubIcon,
-  TwitterIcon,
-} from "components/icons";
-import { about, avatar, name } from "lib/info";
-import Image from "next/image";
+import { ArrowIcon, DownloadIcon, EmailIcon } from "components/icons";
+import { about, name } from "lib/info";
 
 export const revalidate = 60;
 
